@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato Dine-In Recommendation</title>
+    <style>
+        :root {
+            --background-color: #f8f9fa;
+            --text-color: #333;
+            --header-footer-bg: #ffffff;
+            --header-footer-border: #e6e6e6;
+            --button-bg: #0071e3;
+            --button-hover-bg: #005bb5;
+        }
+
+        [data-theme="dark"] {
+            --background-color: #121212;
+            --text-color: #ffffff;
+            --header-footer-bg: #1e1e1e;
+            --header-footer-border: #333333;
+            --button-bg: #bb86fc;
+            --button-hover-bg: #3700b3;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header, .footer {
+            background-color: var(--header-footer-bg);
+            color: var(--text-color);
+            text-align: center;
+            padding: 1em 0;
+            border-bottom: 1px solid var(--header-footer-border);
+            border-top: 1px solid var(--header-footer-border);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .content h1 {
+            font-size: 2em;
+            font-weight: 600;
+            margin-bottom: 0.5em;
+        }
+
+        .content p {
+            font-size: 1.2em;
+            margin-bottom: 2em;
+        }
+
+        .recommendation-button {
+            background-color: var(--button-bg);
+            color: white;
+            padding: 0.75em 1.5em;
+            border: none;
+            border-radius: 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-decoration: none; /* Ensures button style even when used as link */
+            display: inline-block; /* Ensures button takes up space */
+        }
+
+        .recommendation-button:hover {
+            background-color: var(--button-hover-bg);
+        }
+
+        .food-animation {
+            width: 100px; /* Adjust based on your image dimensions */
+            height: 100px; /* Adjust based on your image dimensions */
+            margin-bottom: 1em;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body data-theme="light">
+    <header>
+        Zomato Dine-In Recommendations
+    </header>
+    <div class="container">
+        <div class="content">
+            <img src="https://icons-for-free.com/iff/png/256/meal-1320568026248944827.png" alt="Food Animation" class="food-animation">
+            <h1>Discover the Best Restaurants Near You</h1>
+            <p>We recommend top-rated restaurants based on your preferences. Click the button below to get personalized recommendations.</p>
+            <a href="/recommend" class="recommendation-button">Get Recommendation</a>
+        </div>
+    </div>
+    <footer class="footer">
+        &copy; 2024 Zomato Dine-In. All rights reserved.
+    </footer>
+</body>
+</html>
